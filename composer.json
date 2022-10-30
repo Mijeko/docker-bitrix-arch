@@ -1,0 +1,16 @@
+{
+  "name": "mazraara/docker-bitrix-arch",
+  "description": "Architecture for start bitrix project",
+  "type": "library",
+  "require": {
+    "php": ">=5.3.0"
+  },
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "small_jedi",
+      "email": "popugau@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev"
+}
