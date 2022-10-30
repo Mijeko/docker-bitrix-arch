@@ -1,0 +1,30 @@
+.button {
+  span {
+    color: white;
+  }
+}
+
+.n-choose-size-btn {
+  display: flex;
+  height: 50px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  background: var(--secondary_color);
+  border-bottom: none !important;
+  margin-bottom: 0;
+  flex-shrink: 0;
+
+  &:hover {
+    opacity: 1;
+    background: #dfdfdf;
+  }
+
+  &:active {
+    background: #d2d2d2;
+  }
+
+  svg {
+    margin-right: 15px;
+  }
+}

@@ -1,0 +1,120 @@
+//.articles-list.sections{border-top:1px solid #e5e5e5;padding:0 0 0;margin:41px 0 18px;}
+//.articles-list.sections + hr.long {margin:55px 0 44px;}
+//.articles-list.sections + hr.long + .main_description{margin-bottom:25px;}
+//.articles-list.sections .item{width:33%;padding:40px 0 0;}
+//.articles-list.sections .right-data ul{padding: 0 0 10px 0;}
+//.articles-list.sections .right-data ul li.sect{display: inline-block;vertical-align:top;padding: 0 5px 0 0;}
+//.articles-list .item .left-data{width:120px;float:left;}
+//.articles-list .item .left-data a{display:block;}
+//.articles-list .item .left-data a img{vertical-align:middle;}
+//.articles-list .item .left-data.prod{max-height:120px;overflow-y:hidden;}
+//.articles-list .item .left-data.prod a img{vertical-align:top;width:100%;height:auto;max-height:unset;}
+//.articles-list .item-title a span{display:inline-block;}
+//.articles-list .item .right-data .preview-text{font-size:13px;margin:0 0 -5px;}
+//.articles-list .item .item-title{margin-bottom:9px;}
+//.articles-list .item .item-title a span{font-size:16px;}
+//.articles-list .item .item-title a{text-decoration:none;}
+//.articles-list .item .right-data{margin-left:150px;overflow:visible;padding: 0 20px 0 0;}
+//.articles-list .item .right-data.no_img{margin-left:0;}
+
+.articles-list {
+  &.sections {
+    border-top: 1px solid #e5e5e5;
+    padding: 0 0 0;
+    margin: 41px 0 18px;
+
+    & + hr.long {
+      margin: 55px 0 44px;
+
+      & + .main_description {
+        margin-bottom: 25px;
+      }
+    }
+
+    .right-data ul {
+      padding: 0 0 10px 0;
+
+      li.sect {
+        display: inline-block;
+        vertical-align: top;
+        padding: 0 5px 0 0;
+      }
+    }
+
+    .item {
+      width: 33%;
+      padding: 40px 0 0;
+    }
+  }
+
+  .item-title {
+    a {
+      span {
+        display: inline-block;
+      }
+    }
+  }
+
+  .item {
+    .item-title {
+      display: none;
+      margin-bottom: 9px;
+
+      a {
+        text-decoration: none;
+
+        span {
+          font-size: 16px;
+        }
+      }
+    }
+
+    .right-data {
+      margin-left: 150px;
+      overflow: visible;
+      padding: 0 20px 0 0;
+
+      .preview-text {
+        display: none;
+        font-size: 13px;
+        margin: 0 0 -5px;
+      }
+
+      &.no_img {
+        margin-left: 0;
+      }
+
+    }
+
+    .left-data {
+      width: 120px;
+      float: left;
+
+      a {
+        display: block;
+
+        img {
+          vertical-align: middle;
+        }
+      }
+
+      &.prod {
+        max-height: 120px;
+        overflow-y: hidden;
+
+        a {
+          span {
+            display: inline-block;
+          }
+
+          img {
+            vertical-align: top;
+            width: 100%;
+            height: auto;
+            max-height: unset;
+          }
+        }
+      }
+    }
+  }
+}

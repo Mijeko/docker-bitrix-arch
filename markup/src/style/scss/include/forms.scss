@@ -1,0 +1,71 @@
+.bx-soa-customer-field .bx-soa-tooltip.bx-soa-tooltip-danger {
+  position: absolute !important;
+  bottom: -72px !important;
+  font-size: 12px !important;
+  z-index: 999 !important;
+  left: 0 !important;
+  top: auto !important;
+}
+
+
+.form.inline, .form.RESUME {
+
+  & input::-webkit-input-placeholder,
+  & input::-moz-input-placeholder,
+  & input::-ms-input-placeholder,
+  & input::-o-input-placeholder {
+    color: #6a6a6a;
+  }
+
+  & input[type="tel"]:focus,
+  & input[type="text"]:focus,
+  & input[type="password"]:focus,
+  & input[type="email"]:focus,
+  & textarea:focus,
+  & select:focus {
+    outline: none;
+  }
+
+  & input[type="tel"],
+  & input[type="text"],
+  & input[type="password"],
+  & input[type="email"],
+  & select,
+  & textarea {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    background: #f7f7f7;
+    border: 1px solid #E5E5E5;
+    border-radius: 2px;
+    box-shadow: none;
+    color: #383838;
+    height: auto;
+    font-size: 12px;
+    padding: 8px 13px 7px;
+    width: 100%;
+
+  }
+
+  .bx_filter_vertical input[type="checkbox"] + label:after,
+  .filter input[type="checkbox"] + label:after,
+  .bg_block:after {
+    background-position: 0px -25px !important;
+    font-size: 0;
+    content: ".";
+    display: block;
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url('../images/checkbox.png') no-repeat;
+    z-index: 2;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+  }
+
+
+}

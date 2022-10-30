@@ -1,0 +1,78 @@
+.size-clothes {
+  h3 {
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 500;
+    margin: 0 0 23px;
+  }
+
+  .label {
+    background-color: #fdf5ca !important;
+  }
+
+
+  // костыль: вырезать кнопки скрола, которые лежат в элементах чтобы не вручную не удалять кнопки из размеров одежды в ИБ
+  .size_chart_hrefs {
+    display: none;
+  }
+}
+
+.size_chart_tables {
+  color: #383838;
+  font-size: 14px;
+  margin-top: 80px;
+}
+
+.size_chart_table {
+  overflow: auto;
+
+  table {
+    border: none;
+  }
+
+  td {
+    min-width: 64px;
+    padding: 10px;
+    border: none;
+    border-right: 1px solid #E3E3E3;
+    border-left: 1px solid #E3E3E3;
+
+    &:first-child {
+      min-width: 74px;
+      color: #000000;
+      border-left: none;
+    }
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  tr:nth-child(odd) {
+    background: #F7F7F7;
+  }
+
+  &_female, &_male {
+    display: none;
+  }
+}
+
+.chart_brand.current img {
+  border: 2px solid #F70000;
+  box-sizing: border-box;
+  border-radius: 4px;
+  opacity: 1;
+  filter: none;
+  -webkit-filter: none;
+}
+
+.size_chart_href {
+  font-size: 14px;
+  border: 2px solid #E5E5E5;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.size_chart_href.current {
+  border-color: #0f0f0f;
+}

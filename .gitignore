@@ -1,0 +1,48 @@
+# not exclude
+!application/bitrix/php_interface/dbconn.*.php
+!application/bitrix/php_interface/after_connect_d7.*.php
+!application/bitrix/php_interface/after_connect.*.php
+!application/bitrix/.settings.*.php
+
+# work dirs && files
+#application/bitrix/
+cache/
+*cache*/
+node_modules
+backup*/
+build
+upload
+vendor
+assets
+
+# core files
+application/bitrix/php_interface/dbconn.php
+application/bitrix/php_interface/after_connect_d7.php
+application/bitrix/php_interface/after_connect.php
+application/bitrix/.settings.php
+
+# main files
+robots.txt
+.htaccess
+.idea
+*.sql
+*.log
+*.rar
+*.zip
+*.tar
+*.gz
+*.*.gz
+Thumbs.db
+sitemap*.xml
+*.txt
+test*/
+!test_dev
+yandex_*.html
+*.7z
+known_hosts
+
+# individual project excludes
+/bitrix/[^/]*\.php$
+
+# PHPUnit
+*.cache

@@ -1,0 +1,164 @@
+@import "../include/variables";
+
+.container {
+  @media (min-width: 1701px) {
+    max-width: 1700px !important;
+  }
+}
+
+.wrapper-inner {
+  @media (min-width: 1701px) {
+    max-width: 1700px !important;
+  }
+}
+
+//Блоки на главной странице --------- start
+.block_stock {
+  a:nth-child(4n+1) {
+    @media (min-width: 1701px) {
+      width: calc(1700px / 2 - 10px);
+      height: 400px;
+    }
+  }
+
+  a:nth-child(4n+2) {
+    @media (min-width: 1701px) {
+      width: calc(1700px / 2 - 10px);
+      height: 400px;
+    }
+  }
+
+  a:nth-child(4n+3) {
+    @media (min-width: 1701px) {
+      width: calc(1700px / 2 - 10px);
+      height: 400px;
+    }
+  }
+
+  a:nth-child(4n+4) {
+    @media (min-width: 1701px) {
+      width: calc(1700px / 2 - 10px);
+      height: 400px;
+    }
+  }
+}
+
+//Блоки на главной странице --------- end
+
+
+// оформление заказа --------- start
+.bx_soa_location {
+  .tooltip {
+    position: absolute !important;
+    z-index: 2;
+    left: -13px !important;
+    top: 84px !important;
+  }
+}
+
+// оформление заказа --------- end
+
+
+//характеристики в карточках товара ------ start
+
+.more-info_content {
+  //max-width: 300px;
+  &-item {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    display: flex;
+    justify-content: space-between;
+
+    &__key {
+
+    }
+
+    &__value {
+      max-width: 50%;
+      text-align: right;
+    }
+  }
+}
+
+//характеристики в карточках товара ------ end
+
+.register {
+  &-row {
+    display: flex;
+
+    @media(max-width: 639px) {
+      flex-direction: column;
+    }
+  }
+
+  &-link {
+    padding-left: 2rem;
+
+    @media(max-width: 639px) {
+      padding-top: 1rem;
+      padding-left: 0;
+    }
+
+
+    a {
+      color: gray;
+    }
+  }
+}
+
+.border_block {
+  border: 0 !important;
+}
+
+.bonus-page {
+}
+
+#registraion-page-form {
+  .form-control {
+    display: block !important;
+    width: auto !important;
+    height: auto !important;
+    padding: 0 !important;
+    font-size: inherit !important;
+    font-weight: 400 !important;
+    line-height: 1.5 !important;
+    color: inherit !important;
+    background-color: transparent !important;
+    background-clip: unset !important;
+    border: none !important;
+    border-radius: 0 !important;
+    transition: none !important;
+  }
+
+
+  input[type="tel"], input[type="text"], input[type="password"], input[type="email"], select, textarea {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    background: #f7f7f7;
+    border: 1px solid #E5E5E5;
+    border-radius: 2px;
+    box-shadow: none;
+    color: #383838;
+    height: auto;
+    font-size: 12px;
+    padding: 8px 13px 7px;
+    width: 100%;
+  }
+}
+
+.main_banner img, .main_banner source, .main_banner picture {
+  @media (min-width: 1700px) {
+    height: 750px;
+  }
+}
+
+.block_stock a:nth-child(4n+1), .block_stock a:nth-child(4n+2), .block_stock a:nth-child(4n+3), .block_stock a:nth-child(4n+4) {
+  width: calc((100% / 2) - 10px) !important;
+  height: 360px !important;
+
+  @media (max-width: 1000px) {
+    width: calc(100%) !important;
+  }
+}

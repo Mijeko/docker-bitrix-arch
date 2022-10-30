@@ -1,0 +1,69 @@
+version: "3.9"
+services:
+  nginx:
+    container_name: "${PROJECT_NAME}-nginx"
+    restart: "always"
+    image: smalljedi/sinarnginx:latest
+    build:
+      context: ./
+      dockerfile: ./docker/nginx/Dockerfile
+    ports:
+      - "27016:80"
+    volumes_from:
+      - source
+  php-fpm:
+    container_name: "${PROJECT_NAME}-php-fpm"
+    restart: "always"
+    working_dir: '/var/www/site'
+    image: smalljedi/sinarphp:latest
+    build:
+      context: ./
+      dockerfile: ./docker/php-fpm/74/Dockerfile
+    volumes_from:
+      - source
+  rmq-admin:
+    container_name: "${PROJECT_NAME}-rmq-admin"
+    image: rabbitmq:3-management
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+  registry:
+    container_name: "${PROJECT_NAME}-registry"
+    image: registry:latest
+    ports:
+      - "5000:5000"
+  memcached:
+    container_name: "${PROJECT_NAME}-memcached"
+    restart: "always"
+    command: ['-m ${MEMCACHED_MEMORY}']
+    image: library/memcached:latest
+    ports:
+      - "11211:11211"
+  markup:
+    image: node:12.18.4-alpine
+    tty: true
+    container_name: "${PROJECT_NAME}-markup"
+    volumes_from:
+      - source
+  source:
+    container_name: "${PROJECT_NAME}-source"
+    image: alpine:latest
+    volumes:
+      - ./markup:/markup
+      - ./:/var/www/site
+      - ./docker/php-fpm/74/custom.d:/usr/local/etc/php
+      - ./docker/nginx/conf.d:/etc/nginx/conf.d
+  mariadb:
+    container_name: "${PROJECT_NAME}-mariadb"
+    image: mariadb:10.4
+    restart: "always"
+    volumes:
+      - ./docker/db/start.sql.gz:/docker-entrypoint-initdb.d/sql.sql.gz
+    environment:
+      MARIADB_DATABASE: ${DB_NAME}
+      MARIADB_USER: ${DB_USER}
+      MARIADB_PASSWORD: ${DB_PWD}
+      MYSQL_ROOT_PASSWORD: root
+    command: ['mysqld', '--character-set-server=utf8', '--collation-server=utf8_unicode_ci']
+    ports:
+      - "33061:3306"

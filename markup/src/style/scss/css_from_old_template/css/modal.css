@@ -1,0 +1,74 @@
+.city-select-push {
+    display:none;
+    left: -190% !important;
+}
+.close-cross {
+    position: absolute;
+    top: -8px;
+    left: 212px;
+    cursor:pointer;
+    color: #fff;
+    border-style: none;
+    background-color: rgba(0, 0, 0, 0.9);
+    font-size: 31px;
+    font-weight: bold;
+    display: inline-block;
+    line-height: 0px;
+    padding: 11px 3px;
+}
+
+.close-cross:before {
+    content: "×";
+}
+.city_wrap {
+    position: relative;
+}
+
+.city_text {
+    position: static;
+}
+.modal__form.city {
+    display: none;
+    position: absolute;
+    left: 42%;
+    top: 290px;
+    padding: 20px;
+    z-index: 9;
+    border-radius: 3px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    max-width: 260px;
+    max-height: 250px;
+}
+.error__text {
+    display: none;
+    margin-top: 2px;
+    color: #ee6262;
+    font-size: 16px;
+}
+.error__text.active {
+    display: inline-block;
+}
+.city h3 {
+    color: #fff;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 22px;
+    margin-bottom: 18px;
+    padding: 5px 15px;
+}
+.city button {
+    margin: 10px auto;
+}
+.ui-menu-item {
+    list-style-type: none;
+    list-style-image: none !important;
+}
+.ui-menu-item:before {
+    content: '';
+}
+ul.ui-autocomplete {
+    opacity: 1;
+}

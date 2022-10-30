@@ -1,0 +1,85 @@
+.sinar-gps {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+  cursor: pointer;
+
+  @media (max-width: 990px) {
+    margin-bottom: 20px;
+  }
+
+  &-icon {
+    max-width: 12px;
+    margin-right: 5px;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &-city {
+    &-default {
+      &:hover {
+        opacity: .6;
+      }
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+
+      @media (max-width: 780px) {
+        max-height: 100% !important;
+        flex-direction: row;
+      }
+    }
+
+    &-item {
+      padding: 0 3px;
+      width: 100%;
+      max-width: 120px;
+      overflow: hidden;
+      margin-bottom: 10px;
+      cursor: pointer;
+
+      @media (max-width: 780px) {
+        max-width: 33%;
+      }
+
+      @media (max-width: 620px) {
+        max-width: 50%;
+      }
+
+      @media (max-width: 320px) {
+        max-width: 100%;
+      }
+
+      &:hover {
+        opacity: .6;
+      }
+    }
+  }
+
+  &-form {
+    width: 100%;
+
+    &-container {
+      width: 100%;
+    }
+
+    &-label {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+
+    &-input {
+      border: 1px solid #c6c6c6;
+      width: 100%;
+      padding: 5px;
+      border-radius: 5px;
+    }
+  }
+
+
+}

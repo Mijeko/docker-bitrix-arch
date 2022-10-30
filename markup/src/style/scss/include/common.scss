@@ -1,0 +1,73 @@
+.with-img {
+  display: flex;
+  flex-direction: column;
+
+  li {
+    margin-bottom: 10px;
+  }
+}
+
+.SDEK_selectPVZ {
+  margin-top: 10px;
+  border: 1px #222 solid;
+  padding: 5px 10px;
+}
+
+.product_card-flags {
+
+  .flag-item {
+    width: auto !important;
+    padding: 3px !important;
+    overflow: hidden;
+  }
+
+  // хит
+  .hit {
+    border: 1px solid #FF7E62
+  }
+
+  // новинка
+  .new {
+    border: 1px solid #69B7FF
+  }
+
+  //Текущая коллекция
+  .regular {
+    border: 1px solid #82E88C;
+  }
+
+  // Скидка
+  .stock {
+    border: 1px solid #FF7E62
+  }
+
+  // Товар недели
+  .product_week {
+    border: 1px solid #69B7FF
+  }
+
+  // Товар месяца
+  .product_month {
+    border: 1px solid #69B7FF
+  }
+
+  // Только в интернет-магазине
+  .only_eshop {
+    border: 1px solid #FFFD8C;
+  }
+
+  // Ограниченная серия
+  .limited_edition {
+    border: 1px solid #FFFD8C;
+  }
+
+  // Специальное предложение
+  .special_offer {
+    border: 1px solid #FF7E62;
+  }
+
+  // Скидка
+  .men_s_club {
+    border: 1px solid black;
+  }
+}

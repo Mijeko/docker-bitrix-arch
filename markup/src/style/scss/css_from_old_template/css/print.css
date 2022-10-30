@@ -1,0 +1,10 @@
+.basket_wrapp .module-cart table.bottom.middle td.row_values{float:none !important;display:table-cell !important;padding-top: 39px;}
+.scroll-to-top{display:none !important;}
+#header .middle-h-row .logo_wrapp .logo a, .form_demo-switcher{display:none;}
+#header .middle-h-row .logo_wrapp .logo a.print_img{display:block;}
+header{background: none !important;}
+.phone_text{color:#000 !important;}
+
+div#jivo-iframe-container.jivo-iframe-container-bottom, #bx-panel{display:none!important;}
+.scroll-to-top, .style-switcher, div.jivo-state-widget#jivo-iframe-container, .form_demo-switcher, .jivo-state-widget iframe#jivo_container, jdiv{display:none !important;}
+div.jivo-state-widget#jivo-iframe-container{opacity:0 !important;visibility:hidden !important;}

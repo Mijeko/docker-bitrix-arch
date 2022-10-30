@@ -1,0 +1,17 @@
+@import "modules/init";
+@import "include/variables";
+@import "include/buttons";
+@import "include/common";
+@import "include/fonts";
+@import "include/forms";
+
+@import "css_from_old_template/css/styles";
+@import "css_from_old_template/template_styles";
+
+@import "block/overwrite";
+
+@import "block/sinar-gps";
+@import "block/site-switch-people";
+@import "block/size-clothes";
+@import "block/subsections";
+@import "block/activate_bonus";
