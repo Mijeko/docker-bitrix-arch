@@ -1,5 +1,5 @@
 {
-  "name": "mazraara/docker-bitrix-arch",
+  "name": "smalljedi/docker-bitrix-arch",
   "description": "Architecture for start bitrix project",
   "type": "library",
   "require": {
