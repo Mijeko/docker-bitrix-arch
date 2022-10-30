@@ -3,7 +3,7 @@ services:
   nginx:
     container_name: "${PROJECT_NAME}-nginx"
     restart: "always"
-    image: smalljedi/sinarnginx:latest
+    image: smalljedi/${PROJECT_NAME}-nginx:latest
     build:
       context: ./
       dockerfile: ./docker/nginx/Dockerfile
@@ -15,10 +15,10 @@ services:
     container_name: "${PROJECT_NAME}-php-fpm"
     restart: "always"
     working_dir: '/var/www/site'
-    image: smalljedi/sinarphp:latest
+    image: smalljedi/${PROJECT_NAME}-php:latest
     build:
       context: ./
-      dockerfile: ./docker/php-fpm/74/Dockerfile
+      dockerfile: ./docker/php-fpm/${PHP_VERSION}/Dockerfile
     volumes_from:
       - source
   rmq-admin:
@@ -51,7 +51,7 @@ services:
     volumes:
       - ./markup:/markup
       - ./:/var/www/site
-      - ./docker/php-fpm/74/custom.d:/usr/local/etc/php
+      - ./docker/php-fpm/${PHP_VERSION}/custom.d:/usr/local/etc/php
       - ./docker/nginx/conf.d:/etc/nginx/conf.d
   mariadb:
     container_name: "${PROJECT_NAME}-mariadb"
