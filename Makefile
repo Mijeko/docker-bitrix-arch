@@ -67,6 +67,7 @@ docker-webpack-build:
 webpack-copy:
 	cp -R $(MARKUP)/build/js $(ASSETS)
 	cp -R $(MARKUP)/build/assets/images $(ASSETS)
+	cp -R $(MARKUP)/build/assets/fonts $(ASSETS)
 	cp -R $(MARKUP)/build/css $(ASSETS)
 
 config-local:
